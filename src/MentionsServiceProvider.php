@@ -12,8 +12,9 @@
 namespace BrianFaust\Mentions;
 
 use BrianFaust\Mentions\Builder\MentionBuilder;
+use BrianFaust\ServiceProvider\ServiceProvider;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+class MentionsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
