@@ -14,9 +14,7 @@ $ composer require faustbrian/laravel-mentions
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    BrianFaust\Mentions\MentionsServiceProvider::class
-];
+BrianFaust\Mentions\MentionsServiceProvider::class
 ```
 
 If you need to modify the configuration or the views, you can run:
