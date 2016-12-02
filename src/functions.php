@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-if (! function_exists('mention')) {
+if (!function_exists('mention')) {
     /**
      * @return \Illuminate\Foundation\Application|mixed
      */
