@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Mentions;
 
 use BrianFaust\Mentions\Builder\MentionBuilder;
@@ -19,7 +21,7 @@ class MentionsServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishConfig();
 
@@ -35,7 +37,7 @@ class MentionsServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -53,7 +55,7 @@ class MentionsServiceProvider extends ServiceProvider
      *
      * @return array
      */
-    public function provides()
+    public function provides(): array
     {
         return array_merge(parent::provides(), ['mentionBuilder']);
     }
@@ -63,7 +65,7 @@ class MentionsServiceProvider extends ServiceProvider
      *
      * @return string
      */
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'mentions';
     }
