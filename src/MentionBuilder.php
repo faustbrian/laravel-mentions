@@ -20,7 +20,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Mentions\Builder;
+namespace BrianFaust\Mentions;
 
 use Collective\Html\FormBuilder;
 
@@ -34,7 +34,7 @@ class MentionBuilder extends FormBuilder
      *
      * @return string
      */
-    public function asText($name, $value, $type, $column)
+    public function asText($name, $value, $type, $column): string
     {
         $input = $this->text($name, $value, [
             'id' => 'mention-'.$name,
@@ -53,7 +53,7 @@ class MentionBuilder extends FormBuilder
      *
      * @return string
      */
-    public function asTextArea($name, $value, $type, $column)
+    public function asTextArea($name, $value, $type, $column): string
     {
         $input = $this->textarea($name, $value, [
             'id' => 'mention-'.$name,

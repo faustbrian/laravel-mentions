@@ -22,7 +22,6 @@ declare(strict_types=1);
 
 namespace BrianFaust\Mentions;
 
-use BrianFaust\Mentions\Builder\MentionBuilder;
 use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
 class MentionsServiceProvider extends AbstractServiceProvider

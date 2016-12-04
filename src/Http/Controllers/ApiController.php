@@ -24,6 +24,7 @@ namespace BrianFaust\Mentions\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Http\JsonResponse;
 
 class ApiController extends Controller
 {
@@ -33,7 +34,7 @@ class ApiController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index($type, Request $request)
+    public function index(Request $request, $type): JsonResponse
     {
         try {
             $query = $request->get('q');
