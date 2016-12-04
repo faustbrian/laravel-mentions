@@ -23,9 +23,9 @@ declare(strict_types=1);
 namespace BrianFaust\Mentions;
 
 use BrianFaust\Mentions\Builder\MentionBuilder;
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class MentionsServiceProvider extends ServiceProvider
+class MentionsServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application services.
