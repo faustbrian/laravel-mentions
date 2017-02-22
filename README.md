@@ -1,8 +1,11 @@
 # Laravel Mentions
 
+I would appreciate you taking the time to look at my [Patreon](https://www.patreon.com/faustbrian) and considering to support me if I'm saving you some time with my work.
+
 This package makes it possible to create text/textarea fields that enable **mentioning** by using [At.js](https://github.com/ichord/At.js).
 
 The data for the autocomplete is loaded from a route which will load data based on predefined key-value pairs of an alias and a model in the config.
+
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
