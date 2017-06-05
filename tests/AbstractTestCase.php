@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Mentions.
  *
@@ -27,6 +24,6 @@ abstract class AbstractTestCase extends AbstractPackageTestCase
      */
     protected function getServiceProviderClass($app): string
     {
-        return \BrianFaust\Mentions\ServiceProvider::class;
+        return \BrianFaust\Mentions\MentionsServiceProvider::class;
     }
 }

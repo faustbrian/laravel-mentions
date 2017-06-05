@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Mentions.
  *
@@ -31,7 +28,7 @@ class ApiController extends Controller
         try {
             $query = $request->get('q');
             $column = $request->get('c');
-            $model = app()->make(config('mentions.'.$type));
+            $model = app()->make(config('laravel-mentions.'.$type));
 
             $records = $model->where($column, 'LIKE', "%$query%")
                              ->get([$column]);

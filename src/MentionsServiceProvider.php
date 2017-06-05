@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Mentions.
  *
@@ -14,59 +11,43 @@ declare(strict_types=1);
 
 namespace BrianFaust\Mentions;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class MentionsServiceProvider extends AbstractServiceProvider
+class MentionsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->publishConfig();
+        $this->publishes([
+            __DIR__.'/../config/laravel-mentions.php' => config_path('laravel-mentions.php'),
+        ], 'config');
 
-        $this->publishViews();
+        $this->publishes([
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/laravel-mentions'),
+        ], 'views');
 
-        $this->publishAssets();
+        $this->publishes([
+            __DIR__.'/../public/assets' => public_path('vendor/laravel-mentions'),
+        ], 'public');
 
-        $this->loadViews();
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-mentions');
 
-        $this->loadRoutes();
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 
     /**
      * Register the application services.
      */
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
-        $this->mergeConfig();
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-mentions.php', 'laravel-mentions');
 
         $this->app->singleton('mentionBuilder', function ($app) {
             $form = new MentionBuilder($app['html'], $app['url'], $app['session.store']->getToken());
 
             return $form->setSessionStore($app['session.store']);
         });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), ['mentionBuilder']);
-    }
-
-    /**
-     * Get the default package name.
-     *
-     * @return string
-     */
-    public function getPackageName(): string
-    {
-        return 'mentions';
     }
 }
