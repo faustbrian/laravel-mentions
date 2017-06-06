@@ -44,6 +44,14 @@ class MentionsServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-mentions.php', 'laravel-mentions');
 
+        $this->registerBuilder();
+    }
+
+    /**
+     * Register the builder.
+     */
+    private function registerBuilder()
+    {
         $this->app->singleton('mentionBuilder', function ($app) {
             $form = new MentionBuilder($app['html'], $app['url'], $app['session.store']->getToken());
 
