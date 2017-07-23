@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Mentions\Http\Controllers;
 
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 
 class ApiController extends Controller
