@@ -1,5 +1,10 @@
 # Laravel Mentions
 
+[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Mentions/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Mentions)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-mentions.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Mentions.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Mentions/releases)
+[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Mentions.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Mentions)
+
 This package makes it possible to create text/textarea fields that enable **mentioning** by using [At.js](https://github.com/ichord/At.js).
 
 The data for the autocomplete is loaded from a route which will load data based on predefined key-value pairs of an alias and a model in the config.
@@ -76,7 +81,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to Brian Faust at hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
