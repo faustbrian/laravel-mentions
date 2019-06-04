@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-mentions",
+    "name": "artisanry/mentions",
     "description": "Mentions based on Eloquent models for Laravel 5.",
-    "keywords": ["laravel", "framework", "Laravel-mentions", "Laravel Mentions", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-mentions", "Laravel Mentions"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Mentions\\": "src/"
+            "Artisanry\\Mentions\\": "src/"
         },
         "files": [
             "src/functions.php"
@@ -28,7 +28,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Mentions\\": "tests"
+            "Artisanry\\Tests\\Mentions\\": "tests"
         }
     },
     "config": {
@@ -41,7 +41,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Mentions\\MentionsServiceProvider"
+                "Artisanry\\Mentions\\MentionsServiceProvider"
             ]
         }
     },
